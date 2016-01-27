@@ -18,7 +18,14 @@ remove_action('wp_head', 'wp_generator');
 //ELIMINAR EJECUCION DE CODIGO HTML EN COMMENTS
 add_filter('pre_comment_content', 'wp_specialchars');
 
-//define('DISALLOW_FILE_EDIT', true); //DESACTIVAR EDITOR DE ADMINISTRACION
+//define('DISALLOW_FILE_EDIT', true); //DESACTIVAR EDITOR DE ADMINISTRACION final wpconfig
+
+// Cambiar el pie de pagina del panel de Administración
+function change_footer_admin() {
+    echo '&copy;2016 Copyright Cafe Venezuela. Todos los derechos reservados - Web creada por <a href="http://cafevenezuela.gob.ve">Cafe Venezuela</a>';
+}
+add_filter('admin_footer_text', 'change_footer_admin');
+
 
 ?>
 
