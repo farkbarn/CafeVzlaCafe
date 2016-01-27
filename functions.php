@@ -1,4 +1,28 @@
 <?php
+/*ELIMINAR NOTIFICACION DE ACTUALIZACION PARA NO ADM*/
+global $user_login;
+get_currentuserinfo();
+if ($user_login !== "admin") {
+add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );}
+
+// REMOVER GENERADOR DE META
+remove_action('wp_head', 'wp_generator');
+//remove_action('wp_head', 'rsd_link');
+//remove_action('wp_head', 'wlwmanifest_link');
+//remove_action('wp_head', 'index_rel_link');
+//remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+//remove_action('wp_head', 'start_post_rel_link', 10, 0);
+//remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+
+//ELIMINAR EJECUCION DE CODIGO HTML EN COMMENTS
+add_filter('pre_comment_content', 'wp_specialchars');
+
+//define('DISALLOW_FILE_EDIT', true); //DESACTIVAR EDITOR DE ADMINISTRACION
+
+?>
+
+<?php
 function github_check_update( $transient ) {
 $usergithub=farkbarn;
 $ramastable=master;
