@@ -4,7 +4,7 @@ Theme URI: https://github.com/farkbarn/CafeVzlaCafe
 Author: farkbarn
 Author URI: http://bcpublicidad.com.ve/
 Description:  Tema para Cafe Venezuela.
-Version: 1.0.10
+Version: 1.0.11
 License: GNU General Public License v3.0
 License URI: license
 * Tags: 
@@ -274,13 +274,14 @@ body {
 }
 
 .content-area {
-	width: 65.3062%; /* 640px */
+	width: 69.3062%;/*65.3062%;*/ /* 640px */
 	float: left;
 }
 
 .widget-area {
 	width: 30.6123%; /* 300px */
 	float: right;
+	box-shadow: rgba(128, 128, 128, 0.68) -1px 0px 6px;
 }
 
 .sidebar-content .content-area {
@@ -1237,7 +1238,7 @@ button.menu-toggle .icon-font:before {
 
 .entry-footer {
 	padding: 2.34375% 3.125%;
-	border-top: 1px solid rgba(0, 0, 0, 0.07);
+	/*border-top: 1px solid rgba(0, 0, 0, 0.07);*/
 	color: #959595;
 }
 
