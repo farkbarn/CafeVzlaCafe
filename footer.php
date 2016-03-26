@@ -6,18 +6,17 @@
  *
  */
 ?>
-	<div class='imgfooter'>
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+	<div class='imgfooter' style='background-image:url(<?php echo get_template_directory_uri().'/images/FooterLogos.jpg';?>)'>
+		<ul class='listalogos'>
+			<li class='logo'> <a class='linklogo' href='http://www.vicepresidencia.gob.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/republica.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://www.insai.gob.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/insai.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://www.mat.gob.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/mppat.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://www.inti.gob.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/inti.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://www.bav.com.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/bav.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://www.inia.gov.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/inia.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://fondas.gob.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/fondas.png';?>' /> </a> </li>
+			<li class='logo'> <a class='linklogo' href='http://www.ciara.gob.ve/' target='_blank'> <img src='<?php echo get_template_directory_uri().'/images/fundacionciara.png';?>' /> </a> </li>
 		</ul>
-		<img class="footerlogos" id="footerlogos" src="<?php echo get_template_directory_uri().'images/FooterLogos.jpg';?>" />
 	</div>
 	</div><!-- #main .site-main -->
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
