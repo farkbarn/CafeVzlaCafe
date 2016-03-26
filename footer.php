@@ -6,7 +6,19 @@
  *
  */
 ?>
+	<div class='imgfooter'>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
 		<img class="footerlogos" id="footerlogos" src="<?php echo get_template_directory_uri().'images/FooterLogos.jpg';?>" />
+	</div>
 	</div><!-- #main .site-main -->
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 		<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
