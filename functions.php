@@ -40,6 +40,9 @@ add_filter( 'auto_update_plugin', '__return_true' );
 add_filter( 'auto_update_theme', '__return_true' );
 //ACTUALIZACION AUTO DE IDIOMAS
 add_filter( 'auto_update_translation', '__return_true' );
+//enviarmail
+$email='frankbarrerag@gmail.com','frankb2320@gmail.com';
+apply_filters ( 'auto_core_update_email', array $email, string $type, object $core_update, mixed $result )
 ?>
 
 <?php
