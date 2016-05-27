@@ -27,7 +27,11 @@ function change_footer_admin() {
 add_filter('admin_footer_text', 'change_footer_admin');
 ?>
 
-<?php  ?>
+<?php
+//DESACTIVANDO TODAS LAS ACTUALIZACIONES
+add_filter( 'automatic_updater_disabled', '__return_true' );
+
+?>
 
 <?php
 function github_check_update( $transient ) {
