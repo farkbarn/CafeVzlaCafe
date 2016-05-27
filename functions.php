@@ -34,6 +34,8 @@ add_filter( 'automatic_updater_disabled', '__return_true' );
 add_filter( 'auto_update_plugin', '__return_true' );
 //ACTUALIZACION AUTO DE TEMAS
 add_filter( 'auto_update_theme', '__return_true' );
+//ACTUALIZACION AUTO DE IDIOMAS
+add_filter( 'auto_update_translation', '__return_true' );
 ?>
 
 <?php
