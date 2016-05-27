@@ -8,12 +8,12 @@ add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 
 // REMOVER GENERADOR DE META
 remove_action('wp_head', 'wp_generator');
-//remove_action('wp_head', 'rsd_link');
-//remove_action('wp_head', 'wlwmanifest_link');
-//remove_action('wp_head', 'index_rel_link');
-//remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-//remove_action('wp_head', 'start_post_rel_link', 10, 0);
-//remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 //ELIMINAR EJECUCION DE CODIGO HTML EN COMMENTS
 add_filter('pre_comment_content', 'wp_specialchars');
@@ -25,9 +25,9 @@ function change_footer_admin() {
     echo '&copy;2016 Copyright Cafe Venezuela. Todos los derechos reservados - Web creada por <a href="http://cafevenezuela.gob.ve">Cafe Venezuela</a>';
 }
 add_filter('admin_footer_text', 'change_footer_admin');
-
-
 ?>
+
+<?php  ?>
 
 <?php
 function github_check_update( $transient ) {
