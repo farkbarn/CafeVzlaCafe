@@ -32,7 +32,8 @@ add_filter('admin_footer_text', 'change_footer_admin');
 add_filter( 'automatic_updater_disabled', '__return_true' );
 //ACTUALIZACION AUTO DE PLUGINS
 add_filter( 'auto_update_plugin', '__return_true' );
-
+//ACTUALIZACION AUTO DE TEMAS
+add_filter( 'auto_update_theme', '__return_true' );
 ?>
 
 <?php
