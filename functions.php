@@ -8,12 +8,12 @@ add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 
 // REMOVER GENERADOR DE META
 remove_action('wp_head', 'wp_generator');
-//remove_action('wp_head', 'rsd_link');
-//remove_action('wp_head', 'wlwmanifest_link');
-//remove_action('wp_head', 'index_rel_link');
-//remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-//remove_action('wp_head', 'start_post_rel_link', 10, 0);
-//remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 //ELIMINAR EJECUCION DE CODIGO HTML EN COMMENTS
 add_filter('pre_comment_content', 'wp_specialchars');
@@ -25,8 +25,26 @@ function change_footer_admin() {
     echo '&copy;2016 Copyright Cafe Venezuela. Todos los derechos reservados - Web creada por <a href="http://cafevenezuela.gob.ve">Cafe Venezuela</a>';
 }
 add_filter('admin_footer_text', 'change_footer_admin');
+?>
 
-
+<?php
+//DESACTIVANDO TODAS LAS ACTUALIZACIONES
+add_filter('automatic_updater_disabled','__return_true');
+//DESACTIVAR UPDATE EN CORE PARA MEJORAS DEV
+add_filter('allow_dev_auto_core_updates','__return_false');
+//ACTIVANDO UPDATE EN CORE PARA MEJORAS MENORES
+add_filter('allow_minor_auto_core_updates','__return_true');
+//ACTUALIZACION AUTO DE PLUGINS
+add_filter('auto_update_plugin','__return_true');
+//ACTUALIZACION AUTO DE TEMAS
+add_filter('auto_update_theme','__return_true');
+//ACTUALIZACION AUTO DE IDIOMAS
+add_filter('auto_update_translation','__return_true');
+//ENVIAR EMAIL AL ACTUALIZAR
+$send=true;
+$email='frankbarrerag@gmail.com';
+add_filter('auto_core_update_send_email','__return_true');
+apply_filters('auto_core_update_send_email',$send,$email,$type,$core_update,$result);
 ?>
 
 <?php
