@@ -29,17 +29,17 @@ add_filter('admin_footer_text', 'change_footer_admin');
 
 <?php
 //DESACTIVANDO TODAS LAS ACTUALIZACIONES
-add_filter( 'automatic_updater_disabled', '__return_true' );
+add_filter('automatic_updater_disabled','__return_true');
 //DESACTIVAR UPDATE EN CORE PARA MEJORAS DEV
-add_filter( 'allow_dev_auto_core_updates', '__return_false' );
+add_filter('allow_dev_auto_core_updates','__return_false');
 //ACTIVANDO UPDATE EN CORE PARA MEJORAS MENORES
-add_filter( 'allow_minor_auto_core_updates', '__return_true' );
+add_filter('allow_minor_auto_core_updates','__return_true');
 //ACTUALIZACION AUTO DE PLUGINS
-add_filter( 'auto_update_plugin', '__return_true' );
+add_filter('auto_update_plugin','__return_true');
 //ACTUALIZACION AUTO DE TEMAS
-add_filter( 'auto_update_theme', '__return_true' );
+add_filter('auto_update_theme','__return_true');
 //ACTUALIZACION AUTO DE IDIOMAS
-add_filter( 'auto_update_translation', '__return_true' );
+add_filter('auto_update_translation','__return_true');
 //ENVIAR EMAIL AL ACTUALIZAR
 $send=true;
 $email='frankbarrerag@gmail.com';
