@@ -30,6 +30,10 @@ add_filter('admin_footer_text', 'change_footer_admin');
 <?php
 //DESACTIVANDO TODAS LAS ACTUALIZACIONES
 add_filter( 'automatic_updater_disabled', '__return_true' );
+//ACTIVAR UPDATE EN CORE PARA MEJORAS DEV
+add_filter( 'allow_dev_auto_core_updates', '__return_true' );
+//ACTIVANDO UPDATE EN CORE PARA MEJORAS MENORES
+add_filter( 'allow_minor_auto_core_updates', '__return_true' );
 //ACTUALIZACION AUTO DE PLUGINS
 add_filter( 'auto_update_plugin', '__return_true' );
 //ACTUALIZACION AUTO DE TEMAS
