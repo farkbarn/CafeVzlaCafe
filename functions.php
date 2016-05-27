@@ -30,6 +30,8 @@ add_filter('admin_footer_text', 'change_footer_admin');
 <?php
 //DESACTIVANDO TODAS LAS ACTUALIZACIONES
 add_filter( 'automatic_updater_disabled', '__return_true' );
+//ACTUALIZACION AUTO DE PLUGINS
+add_filter( 'auto_update_plugin', '__return_true' );
 
 ?>
 
