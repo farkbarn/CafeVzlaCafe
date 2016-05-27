@@ -270,6 +270,8 @@ body {
 	background: #f0f3f5;
 }
 
+body.custom-background{background-image:url('./images/bgcafe.jpg') !Important;background-repeat:no-repeat;background-position:top right;background-attachment:fixed;}
+
 #page {
 	margin: auto;
 	padding: 0;
